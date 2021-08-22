@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import "variables";
+@import "mixins";
+
+body {
+    @include backgroundMob;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.container {
+    @include container;
+    @include border;
+    
+}
+
+
+
+
+
+.attribution { 
+    @include attribution;
+}
+ 

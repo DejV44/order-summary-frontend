@@ -1,0 +1,15 @@
+@mixin fonts {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+@mixin backgroundMob {
+    background: url(/images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin container {
+    max-width: 450px;
+    margin: 1em auto;
+    @include fonts;
+}

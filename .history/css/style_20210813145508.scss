@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import "variables";
+@import "mixins";
+
+body {
+    @include body;
+    @include fonts;
+}
+
+.container {
+    @include container;
+    @include border;
+    
+}
+.attribution { 
+    @include attribution;
+}
+
+.content {
+    @include content;
+}
+ 
+.price_container {
+    display: flex;
+    justify-content: space-between;
+    @include border;
+    background: $VeryPaleBlue;
+    margin: 0 1rem;
+    padding: 1rem 0;
+    .annual {
+        display: flex;
+        padding: 0 1.2rem;
+
+        p {
+            padding: 0 1rem;
+        }
+        .bold {
+            font-weight: 700;
+        }
+    }
+
+    a {
+        margin: 0.6rem 1.2rem 0;
+    }
+}
+
+.button {
+    margin: 1rem;
+    @include border;
+    padding: 1rem;
+    background: $Brightblue;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    &:hover {
+        background: $Desaturatedblue;
+        //box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        box-shadow: 0px 5px black;
+    }
+    a {
+        text-decoration: none;
+        color: $VeryPaleBlue;
+    }
+}
+
+.cancel_button {
+    margin: 2rem;
+    
+    a {
+        text-decoration: none;
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    body {
+        @include backgroundDesk;
+    }
+}

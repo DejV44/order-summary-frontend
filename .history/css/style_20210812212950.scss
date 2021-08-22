@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import "variables";
+@import "mixins";
+
+body {
+    @include body;
+    @include fonts;
+}
+
+.container {
+    @include container;
+    @include border;
+    
+}
+.attribution { 
+    @include attribution;
+}
+
+.content {
+    @include content;
+}
+ 
+.price_container {
+    display: flex;
+    justify-content: space-between;
+    @include border;
+    background: $VeryPaleBlue;
+    margin: 0 1rem;
+    padding: 1rem 0;
+    .annual {
+        display: flex;
+        padding: 0 1rem;
+
+        p {
+            padding: 0 1rem;
+        }
+        .bold {
+            font-weight: 700;
+        }
+    }
+
+    a {
+        margin: 0.6rem 1rem 0;
+    }
+}
